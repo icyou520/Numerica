@@ -1,0 +1,151 @@
+/* General styling for the body of the document */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+/* Container that wraps the rules and the game board */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the game title */
+.game-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the game container, which holds the game board */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #2e2e2e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+}
+
+/* Styling for stacks and columns */
+.stacks, .columns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for individual stack and column */
+.stack, .column {
+    width: 60px;
+    height: 240px;
+    background: #3e3e3e;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Styling for hover effect on stack and column */
+.stack:hover, .column:hover {
+    background: #4e4e4e;
+}
+
+/* Styling for the counter, which is a number that can be placed on stack or column */
+.counter {
+    width: 56px;
+    height: 56px;
+    background: #505050;
+    border: 2px solid #808080;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Adjust position of counter when it is placed in a column */
+.column .counter:not(:last-child) {
+    bottom: auto;
+    top: 2px;
+}
+
+/* Styling for the start game button */
+#start-game {
+    align-self: center;
+    margin-top: 40px;
+    background: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #e1e1e1;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the start game button */
+#start-game:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Remove outline when start game button is focused */
+#start-game:focus {
+    outline: none;
+}
+
+/* Styling for the rules container */
+.info-container {
+    max-width: 300px;
+    margin-right: 40px;
+    padding: 20px;
+    background: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for titles inside the rules container */
+.info-container h2, .info-container h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #007BFF; /* Blue for titles */
+    padding-bottom: 5px;
+    color: #007BFF; /* Blue for titles */
+}
+
+/* Styling for paragraphs inside the rules container */
+.info-container p {
+    margin-bottom: 15px;
+    color: #e1e1e1; /* White for regular text */
+}
+
+/* Styling for the section that contains the draggable counter */
+.draggable-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Styling for the draggable counter */
+#draggable-counter {
+    width: 56px;
+    height: 56px;
+    background: #007BFF; /* Blue background */
+    border: 2px solid #0056b3; /* Darker blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #e1e1e1; /* White text */
+    visibility: hidden;
+}
